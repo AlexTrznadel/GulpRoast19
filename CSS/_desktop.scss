@@ -1,0 +1,45 @@
+@media (min-width: 990px) {
+    nav {
+      margin-right: 1rem;
+  
+      ul {
+        @include nospace;
+        list-style-type: $list-style-type;
+        @include rowwrap;
+        justify-content: flex-start;
+      }
+      li {
+        margin: 0 1rem 1rem 1rem;
+        font-size: $font-size-2;
+      }
+      .logo {
+        flex-basis: auto;
+        margin-right: auto;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        display: block;
+        border-radius: 10px;
+        margin: 0 0 2rem 0;
+        text-align: center;
+        margin-top: 3.5rem;
+      }
+    }
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      @include rowwrap;
+      justify-content: space-between;
+    }
+    article {
+      flex-basis: 48%;
+    }
+    figure {
+      margin: 3rem 0 0 0;
+      flex-basis: 50%;
+    }
+  }
+  

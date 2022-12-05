@@ -1,0 +1,37 @@
+@media (min-width: 576px) {
+    nav {
+      ul {
+        @include nospace;
+        @include rowwrap;
+        list-style-type: $list-style-type;
+        justify-content: center;
+      }
+      li {
+        margin: 0 1rem 1rem 1rem;
+        font-size: $font-size-2;
+      }
+  
+      .logo img {
+        max-width: 150px;
+      }
+  
+      .logo {
+        flex-basis: 100%;
+        text-align: center;
+      }
+    }
+    .main {
+      @include rowwrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      justify-content: space-between;
+    }
+    article {
+      flex-basis: 68%;
+    }
+    figure {
+      margin: 3rem 0 0 0;
+      flex-basis: 30%;
+    }
+  }

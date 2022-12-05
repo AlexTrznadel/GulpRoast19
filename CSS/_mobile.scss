@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-color: $color-1;
+    font-family: $text-font;
+    @include nospace;
+    line-height: 2;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: $header-font;
+  }
+  h1 {
+    font-size: $font-size-1;
+    margin-bottom: 0;
+  }
+  /* make images flexible */
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: $color-2;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  
+  header {
+    border-bottom: 10px solid $color-3;
+  }
+  /* navbar styling */
+  
+  nav {
+    margin: 0 1rem;
+    .logo img {
+      max-width: 150px;
+    }
+    .logo {
+      margin-right: auto;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      border-radius: 10px;
+      margin: 0 0 2rem 0;
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+    & a:hover {
+      color: $color-3;
+    }
+    ul {
+      display: block;
+      list-style-type: $list-style-type;
+    }
+  }
+  
+  .main-bkgd {
+    background: $color-4 url(../Media/images/gulp-bottom-beans.jpg) repeat-x
+      bottom;
+    padding-bottom: 300px;
+  }
+  
+  .main {
+    @include rowwrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    justify-content: center;
+  }
+  article {
+    flex-basis: 73%;
+  }
+  figure {
+    margin: 3rem 0 0 0;
+    flex-basis: auto;
+    img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: $color-2;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    color: $color-5;
+    text-decoration: none;
+    border: 3px solid $color-2;
+    &:hover {
+      background-color: $color-5;
+      color: $color-2;
+    }
+  }
+  
+  footer {
+    color: $color-5;
+    text-align: center;
+    border-top: 10px solid $color-3;
+    ul {
+      @include nospace;
+      @include rowwrap;
+      list-style-type: $list-style-type;
+      justify-content: center;
+    }
+    a {
+      color: $color-5;
+      font-size: $font-size-1;
+      display: block;
+      margin: 0 1rem 3rem 1rem;
+    }
+  }
